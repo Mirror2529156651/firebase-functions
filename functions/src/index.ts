@@ -13,6 +13,6 @@ admin.initializeApp();
 
 module.exports = {
     get_data: functions.https.onRequest((req, res) => {
-        res.send(req.url);
+        res.send(req.url!.slice(1));
     })
 }
